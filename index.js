@@ -11,7 +11,7 @@ bot.on('ready', function () {
 
 bot.on('guildMemberAdd', member => {
     member.createDM().then(channel => {
-        return channel.send('Bienvenue sur le serveur de Alexpgm' + member.displayName)
+        return channel.send('Bienvenue sur le serveur de SAYZE FR RP' + member.displayName)
         console.log(`${member.displayName} à rejoind le serveur.`)
     }).catch(console.error)
 });
@@ -40,5 +40,4 @@ bot.on('message', msg => {
 
 });
 
-bot.login(cfg.token); //a garder en version desktop
 bot.login(token); //a garder en version heroku
