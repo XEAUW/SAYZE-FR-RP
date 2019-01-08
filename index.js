@@ -9,7 +9,7 @@ bot.on('ready', function () {
     bot.user.setActivity('rien').catch(console.error)
 });
 
-bot.on('guildMemberAdd', member => {
+/*bot.on('guildMemberAdd', member => {
     member.createDM().then(channel => {
         return channel.send('Bienvenue sur le serveur de SAYZE FR RP' + member.displayName)
         console.log(`${member.displayName} à rejoind le serveur.`)
@@ -39,5 +39,5 @@ bot.on('message', msg => {
     }
 
 });
-
+*/
 bot.login(token); //a garder en version heroku
