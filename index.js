@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 const cfg = require('./index.json'); // a garder en version desktop
-//const token = ; // a garder en version heroku
+const tok = process.env.token ; // a garder en version heroku
 const prefix = ("?");
 
 bot.on('ready', function () {
@@ -9,7 +9,7 @@ bot.on('ready', function () {
     bot.user.setActivity('rien').catch(console.error)
 });
 
-/*bot.on('guildMemberAdd', member => {
+bot.on('guildMemberAdd', member => {
     member.createDM().then(channel => {
         return channel.send('Bienvenue sur le serveur de SAYZE FR RP' + member.displayName)
         console.log(`${member.displayName} à rejoind le serveur.`)
@@ -39,5 +39,5 @@ bot.on('message', msg => {
     }
 
 });
-*/
-bot.login(process.env.token); //a garder en version heroku
+
+bot.login(tok); //a garder en version heroku
